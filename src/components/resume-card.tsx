@@ -21,7 +21,7 @@ interface ResumeCardProps {
   period: string;
   description?: string;
   testimonial?: string;
-  tags?: string[];
+  tags?: readonly string[];
 }
 export const ResumeCard = ({
   logoUrl,
