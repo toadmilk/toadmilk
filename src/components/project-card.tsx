@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { autolink } from "micromark-core-commonmark";
 
 interface Props {
   title: string;
@@ -65,6 +66,8 @@ export function ProjectCard({
             src={image}
             alt={title}
             className="h-40 w-full overflow-hidden object-cover object-top"
+            width={1920}
+            height={1080}
           />
         )}
       </Link>

@@ -2,12 +2,14 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardHeader } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import { MagicCard } from "@/components/magicui/magic-card";
+import { useTheme } from "next-themes";
 
 interface ResumeCardProps {
   logoUrl: string;
@@ -18,6 +20,8 @@ interface ResumeCardProps {
   badges?: readonly string[];
   period: string;
   description?: string;
+  testimonial?: string;
+  tags?: string[];
 }
 export const ResumeCard = ({
   logoUrl,
@@ -28,6 +32,8 @@ export const ResumeCard = ({
   badges,
   period,
   description,
+  testimonial,
+  tags,
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
@@ -37,6 +43,8 @@ export const ResumeCard = ({
       setIsExpanded(!isExpanded);
     }
   };
+
+  const { theme } = useTheme();
 
   return (
     <Link
@@ -101,6 +109,29 @@ export const ResumeCard = ({
               className="mt-2 text-xs sm:text-sm"
             >
               {description}
+              <CardContent className="mt-auto flex flex-col">
+                {tags && tags.length > 0 && (
+                    <div className="mt-2 flex flex-wrap gap-1">
+                      {tags?.map((tag) => (
+                          <Badge
+                              className="px-1 py-0 text-[10px]"
+                              variant="secondary"
+                              key={tag}
+                          >
+                            {tag}
+                          </Badge>
+                      ))}
+                    </div>
+                )}
+              </CardContent>
+              {/*{ testimonial && (*/}
+              {/*<MagicCard*/}
+              {/*    className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-4xl"*/}
+              {/*    gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}*/}
+              {/*>*/}
+              {/*  {testimonial}*/}
+              {/*</MagicCard>*/}
+              {/*)}*/}
             </motion.div>
           )}
         </div>
