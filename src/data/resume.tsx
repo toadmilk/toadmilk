@@ -152,7 +152,7 @@ export const DATA = {
       title: "Software Development Manager, Fleetpin",
       quote: "Ben was one of the first engineers to come through our Fleetpin intern programme. I remember interviewing Ben and he stood out specifically for his technical skills compared to the other five candidates. Over the 10 week internship he further surprised us and picked up one of our backend languages; Scala. As a engineer myself I can appreciate what a feat that was and simply put was over and beyond what we expected. Ben had a calm and fun approach to development and fitted in well with our software development team. If you are looking for graduate with great technical skills and potential, I would highly recommend Ben.",
       imageUrl: "/joe.png",
-      link: "https://www.linkedin.com/in/joe-sutton-148b16117/",
+      href: "https://www.linkedin.com/in/joe-sutton-148b16117/",
     },
   ],
 } as const;

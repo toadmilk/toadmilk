@@ -1,19 +1,27 @@
 "use client";
 
-import { MagicCard } from "@/components/magicui/magic-card";
 import React from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
-import {cn} from "@/lib/utils";
-import Image from "next/image";
-import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import Markdown from "react-markdown";
-import {Badge} from "@/components/ui/badge";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-export default function TestimonialCard({testimonial}) {
-    const { theme } = useTheme();
-
+interface TestimonialCardProps {
+    quote: string;
+    name: string;
+    title: string;
+    imageUrl: string;
+    initials: string;
+    href: string;
+}
+export default function TestimonialCard({
+    quote,
+    name,
+    title,
+    imageUrl,
+    initials,
+    href
+}: TestimonialCardProps) {
     return (
         <Card
             className={
@@ -23,7 +31,7 @@ export default function TestimonialCard({testimonial}) {
             <CardHeader className="px-4 pt-4">
                 <div className="space-y-1">
                     <p className="text-sm text-gray-500">
-                        {testimonial.quote}
+                        {quote}
                     </p>
                 </div>
             </CardHeader>
@@ -41,15 +49,15 @@ export default function TestimonialCard({testimonial}) {
                         </svg>
                     ))}
                 </div>
-                <Link href={testimonial.link} className="my-2">
+                <Link href={href} className="my-2">
                 <div className="flex items-center">
                     <Avatar className="size-14 border mr-2">
-                      <AvatarImage alt={testimonial.name} src={testimonial.imageUrl} />
-                      <AvatarFallback>{testimonial.initials}</AvatarFallback>
+                      <AvatarImage alt={name} src={imageUrl} />
+                      <AvatarFallback>{initials}</AvatarFallback>
                     </Avatar>
                     <div>
-                        <p className="text-base font-bold">{testimonial.name}</p>
-                        <p className="text-sm text-gray-500">{testimonial.title}</p>
+                        <p className="text-base font-bold">{name}</p>
+                        <p className="text-sm text-gray-500">{title}</p>
                     </div>
                 </div>
                 </Link>

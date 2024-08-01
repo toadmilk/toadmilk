@@ -197,7 +197,15 @@ export default function Page() {
               delay={BLUR_FADE_DELAY * 16}
           >
             {DATA.testimonials.map((testimonial) => (
-                <TestimonialCard key={testimonial.name} testimonial={testimonial}/>
+                <TestimonialCard
+                    key={testimonial.name}
+                    name={testimonial.name}
+                    title={testimonial.title}
+                    quote={testimonial.quote}
+                    imageUrl={testimonial.imageUrl}
+                    initials={testimonial.initials}
+                    href={testimonial.href}
+                />
             ))}
           </BlurFade>
         </div>
