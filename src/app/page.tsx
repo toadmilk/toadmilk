@@ -36,25 +36,25 @@ export default function Page() {
               <BlurFade delay={BLUR_FADE_DELAY}>
                 <div className="justify-center">
                   {Object.entries(DATA.contact.social)
-                      .filter(([_, social]) => social.navbar)
-                      .map(([name, social]) => (
-                          <Tooltip>
-                            <TooltipTrigger asChild>
-                              <Link
-                                  href={social.url}
-                                  className={cn(
-                                      buttonVariants({variant: "ghost", size: "icon"}),
-                                      "size-12"
-                                  )}
-                              >
-                                <social.icon className="size-4"/>
-                              </Link>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              <p>{name}</p>
-                            </TooltipContent>
-                          </Tooltip>
-                      ))}
+                    .filter(([_, social]) => social.navbar)
+                    .map(([name, social]) => (
+                      <Tooltip key={name}>
+                        <TooltipTrigger asChild>
+                          <Link
+                            href={social.url}
+                            className={cn(
+                                buttonVariants({variant: "ghost", size: "icon"}),
+                                "size-12"
+                            )}
+                          >
+                            <social.icon className="size-4"/>
+                          </Link>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>{name}</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    ))}
                 </div>
               </BlurFade>
             </div>
