@@ -76,7 +76,7 @@ export const DATA = {
     {
       school: "University of Canterbury",
       href: "https://www.canterbury.ac.nz",
-      degree: "Bachelor's Degree of Computer Science (BCS)",
+      degree: "Bachelor's Degree of Computer Science (BSC)",
       logoUrl: "/canterbury.png",
       start: "2021",
       end: "2023",

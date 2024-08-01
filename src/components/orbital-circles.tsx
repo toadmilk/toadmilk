@@ -41,7 +41,7 @@ export function OrbitingCirclesTech() {
                 <Icons.react />
             </OrbitingCircles>
 
-            {/* Outer Outer Circles */}
+            {/* Outermost Circles */}
             <OrbitingCircles
                 className="size-[30px] border-none bg-transparent"
                 duration={20}
