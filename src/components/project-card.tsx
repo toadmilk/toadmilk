@@ -10,7 +10,6 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
-import { autolink } from "micromark-core-commonmark";
 
 interface Props {
   title: string;

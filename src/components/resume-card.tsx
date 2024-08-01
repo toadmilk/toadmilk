@@ -8,8 +8,6 @@ import { motion } from "framer-motion";
 import { ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-import { MagicCard } from "@/components/magicui/magic-card";
-import { useTheme } from "next-themes";
 
 interface ResumeCardProps {
   logoUrl: string;
@@ -20,7 +18,6 @@ interface ResumeCardProps {
   badges?: readonly string[];
   period: string;
   description?: string;
-  testimonial?: string;
   tags?: readonly string[];
 }
 export const ResumeCard = ({
@@ -32,7 +29,6 @@ export const ResumeCard = ({
   badges,
   period,
   description,
-  testimonial,
   tags,
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
@@ -43,8 +39,6 @@ export const ResumeCard = ({
       setIsExpanded(!isExpanded);
     }
   };
-
-  const { theme } = useTheme();
 
   return (
     <Link
@@ -124,14 +118,6 @@ export const ResumeCard = ({
                     </div>
                 )}
               </CardContent>
-              {/*{ testimonial && (*/}
-              {/*<MagicCard*/}
-              {/*    className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-4xl"*/}
-              {/*    gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}*/}
-              {/*>*/}
-              {/*  {testimonial}*/}
-              {/*</MagicCard>*/}
-              {/*)}*/}
             </motion.div>
           )}
         </div>

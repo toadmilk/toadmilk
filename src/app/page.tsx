@@ -8,10 +8,10 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { OrbitingCirclesTech } from "@/components/orbital-circles";
-import {DockIcon} from "@/components/magicui/dock";
 import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";
 import {cn} from "@/lib/utils";
 import {buttonVariants} from "@/components/ui/button";
+import TestimonialCard from "@/components/testimonial-card";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -98,7 +98,6 @@ export default function Page() {
                 badges={work.badges}
                 period={`${work.start} - ${work.end ?? "Present"}`}
                 description={work.description}
-                testimonial={work.testimonial}
                 tags={work.technologies}
               />
             </BlurFade>
@@ -181,6 +180,26 @@ export default function Page() {
               </BlurFade>
             ))}
           </div>
+        </div>
+      </section>
+      <section id="testimonials">
+        <BlurFade delay={BLUR_FADE_DELAY * 11}>
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm mb-4">
+                Testimonials
+              </div>
+            </div>
+          </div>
+        </BlurFade>
+        <div className="grid grid-cols-1 gap-3 max-w-[800px] mx-auto">
+          <BlurFade
+              delay={BLUR_FADE_DELAY * 16}
+          >
+            {DATA.testimonials.map((testimonial) => (
+                <TestimonialCard key={testimonial.name} testimonial={testimonial}/>
+            ))}
+          </BlurFade>
         </div>
       </section>
       <section id="contact">
