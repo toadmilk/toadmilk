@@ -65,7 +65,7 @@ export const DATA = {
       location: "Christchurch, New Zealand",
       title: "Software Engineer Intern",
       logoUrl: "/fleetpin.png",
-      start: "November 2023",
+      start: "Nov 2023",
       end: "Feb 2024",
       description: "Lead development on an internal stock management tool; reducing data entry time by over 93%, human input errors by 97%, and improving device \n" +
           "registration speed by 82%. Took significant ownership in frontend, navigating through vague user requirements and Figma designs with autonomy and initiative. Developed a CSV importer and a \"Pick and Provision\" interface, streamlining device management and data handling. Spearheaded API development, conducted automated integration tests and actively lead database schema refinement.",
