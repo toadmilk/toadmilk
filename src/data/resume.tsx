@@ -8,7 +8,7 @@ export const DATA = {
   location: "Christchurch, New Zealand",
   locationLink: "https://www.google.com/maps/place/Christchurch",
   description:
-    "Software Engineer specialising in full-stack with a focus on frontend.",
+    "Full-stack Software Engineer with a focus on frontend.",
   summary: "I’m a Christchurch-based developer with 8 years of experience in creating complex web apps and digital experiences. I’m passionate about innovation and aim to be part of a fun, forward-thinking team in the next 5 years.",
   avatarUrl: "/me.png",
   skills: [
@@ -120,7 +120,7 @@ export const DATA = {
     {
       title: "Pondering Reality",
       href: "https://www.youtube.com/watch?v=TGgnSuIuuqk",
-      dates: "July 2022 - September 2022",
+      dates: "Jul 2022 - Sep 2022",
       active: true,
       description:
         "VR puzzle game experience where you play as a wizard who wishes to travel to the future to look at cat pictures.",
