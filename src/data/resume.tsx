@@ -4,7 +4,7 @@ import { CodeIcon, HomeIcon, NotebookIcon, PencilLine } from "lucide-react";
 export const DATA = {
   name: "Benjamin Williams",
   initials: "BW",
-  url: "https://bwiportfolio.vercel.app",
+  url: "https://benjaminwilliams.xyz",
   location: "Christchurch, New Zealand",
   locationLink: "https://www.google.com/maps/place/Christchurch",
   description:
