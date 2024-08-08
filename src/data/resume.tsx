@@ -55,6 +55,12 @@ export const DATA = {
         icon: Icons.email,
         navbar: true,
       },
+      Resume: {
+        name: "Resume",
+        url: "/resume.pdf",
+        icon: Icons.file,
+        navbar: true,
+      },
     },
   },
 
