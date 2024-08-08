@@ -7,7 +7,7 @@
 
 - 🌱 I’m currently learning **Next.js, tRPC**
 
-- 👨‍💻 All of my projects are available at [bwiportfolio.vercel.app](https://bwiportfolio.vercel.app)
+- 👨‍💻 All of my projects are available at [benjaminwilliams.xyz](https://benjaminwilliams.xyz)
 
 - 💬 Ask me about **React**
 
