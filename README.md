@@ -3,7 +3,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=toadmilk&label=Profile%20views&color=0e75b6&style=flat" alt="toadmilk" /> </p>
 
-- 🔭 I’m currently working on [midnight](https://github.com/toadmilk/midnight)
+- 🔭 I’m currently working on midnight, a chatgpt wrapper for creating short-form content from scripts. Public release soon... 👀
 
 - 🌱 I’m currently learning **Next.js, tRPC**
 
