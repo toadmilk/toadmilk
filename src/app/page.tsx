@@ -18,6 +18,21 @@ const BLUR_FADE_DELAY = 0.04;
 export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
+      {/* Really nice gradient blurred shapes to add colour to the page */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 -top-400 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-800">
+        <div style={{
+          clipPath: 'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+        }} className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#FF00FE] to-[#1000FF] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+        />
+      </div>
+
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 -top-400 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-800">
+        <div style={{
+          clipPath: 'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+        }} className="relative left-[calc(50%-13rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#FF00FE] to-[#1000FF] opacity-30 sm:left-[calc(50%-36rem)] sm:w-[72.1875rem]"
+        />
+      </div>
+
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
@@ -43,8 +58,8 @@ export default function Page() {
                           <Link
                             href={social.url}
                             className={cn(
-                                buttonVariants({variant: "ghost", size: "icon"}),
-                                "size-12"
+                              buttonVariants({ variant: "ghost", size: "icon" }),
+                              "size-12"
                             )}
                           >
                             <social.icon className="size-4"/>
@@ -73,7 +88,7 @@ export default function Page() {
           <h2 className="text-xl font-bold">About</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-black dark:text-white dark:prose-invert">
             {DATA.summary}
           </Markdown>
         </BlurFade>
@@ -84,11 +99,11 @@ export default function Page() {
             <h2 className="text-xl font-bold">Experience</h2>
           </BlurFade>
           {DATA.work.map((work, id) => (
-              <BlurFade
-                  key={work.company}
-                  delay={BLUR_FADE_DELAY * 6 + id * 0.05}
-              >
-                <ResumeCard
+            <BlurFade
+              key={work.company}
+              delay={BLUR_FADE_DELAY * 6 + id * 0.05}
+            >
+              <ResumeCard
                 key={work.company}
                 logoUrl={work.logoUrl}
                 altText={work.company}
@@ -194,18 +209,18 @@ export default function Page() {
         </BlurFade>
         <div className="grid grid-cols-1 gap-3 max-w-[800px] mx-auto">
           <BlurFade
-              delay={BLUR_FADE_DELAY * 16}
+            delay={BLUR_FADE_DELAY * 16}
           >
             {DATA.testimonials.map((testimonial) => (
-                <TestimonialCard
-                    key={testimonial.name}
-                    name={testimonial.name}
-                    title={testimonial.title}
-                    quote={testimonial.quote}
-                    imageUrl={testimonial.imageUrl}
-                    initials={testimonial.initials}
-                    href={testimonial.href}
-                />
+              <TestimonialCard
+                key={testimonial.name}
+                name={testimonial.name}
+                title={testimonial.title}
+                quote={testimonial.quote}
+                imageUrl={testimonial.imageUrl}
+                initials={testimonial.initials}
+                href={testimonial.href}
+              />
             ))}
           </BlurFade>
         </div>
@@ -221,20 +236,20 @@ export default function Page() {
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to get in contact? Just shoot me an{ " " }
+                Want to get in contact? Just shoot me an{" "}
                 <Link
-                    href={ DATA.contact.social.Email.url }
-                    className="text-blue-500 hover:underline"
+                  href={DATA.contact.social.Email.url}
+                  className="text-blue-500 hover:underline"
                 >
                   email
-                </Link>{ " " }
-                at {DATA.contact.email} or give me a{ " " }
+                </Link>{" "}
+                at {DATA.contact.email} or give me a{" "}
                 <Link
-                    href={ "tel:" + DATA.contact.tel }
-                    className="text-blue-500 hover:underline"
+                  href={"tel:" + DATA.contact.tel}
+                  className="text-blue-500 hover:underline"
                 >
                   call
-                </Link>{ " " }
+                </Link>{" "}
                 at {DATA.contact.tel} and I&apos;ll respond whenever I can.
               </p>
             </div>
