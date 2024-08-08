@@ -59,7 +59,7 @@ export default function Page() {
               </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <OrbitingCirclesTech className="md:ml-4 mt-4 md:mt-0"/>
+              <OrbitingCirclesTech />
             </BlurFade>
           </div>
         </div>
