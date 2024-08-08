@@ -231,7 +231,7 @@ export default function Page() {
                 >
                   call
                 </Link>{" "}
-                at {DATA.contact.tel} and I&apos;ll respond whenever I can.
+                at {DATA.contact.tel} and I&apos;ll respond as soon as I can.
               </p>
             </div>
           </BlurFade>
