@@ -20,7 +20,7 @@ export default function Page() {
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
-          <div className="gap-2 flex justify-between">
+          <div className="gap-2 flex flex-col md:flex-row justify-between">
             <div className="flex-col flex flex-1 justify-center">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
@@ -59,11 +59,7 @@ export default function Page() {
               </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <OrbitingCirclesTech/>
-              {/*<Avatar className="size-28 border">*/}
-              {/*  <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />*/}
-              {/*  <AvatarFallback>{DATA.initials}</AvatarFallback>*/}
-              {/*</Avatar>*/}
+              <OrbitingCirclesTech className="md:ml-4 mt-4 md:mt-0"/>
             </BlurFade>
           </div>
         </div>
