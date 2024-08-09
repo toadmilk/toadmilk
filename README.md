@@ -1,5 +1,4 @@
-<h1 align="center">Hi 👋, I'm Benjamin</h1>
-<h3 align="center">Full-stack Software Engineer with a focus on frontend.</h3>
+![Header](public/github-header-image.png)
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=toadmilk&label=Profile%20views&color=0e75b6&style=flat" alt="toadmilk" /> </p>
 
