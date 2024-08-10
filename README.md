@@ -42,6 +42,9 @@
     <a href="https://trpc.io/" target="_blank" rel="noreferrer">
         <img src="https://avatars.githubusercontent.com/u/78011399?s=200&v=4" alt="trpc" width="40" height="40"/>
     </a>
+    <a href="https://zod.dev" target="_blank" rel="noreferrer"> 
+        <img src="https://raw.githubusercontent.com/colinhacks/zod/main/logo.svg" alt="zod" width="40" height="40"/>
+    </a>
     <a href="https://uploadthing.com" target="_blank" rel="noreferrer">
         <img src="https://uploadthing.com/favicon.ico" alt="uploadthing" width="40" height="40"/>
     </a>
