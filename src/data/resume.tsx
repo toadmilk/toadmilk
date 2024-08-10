@@ -170,6 +170,7 @@ export const DATA = {
         "PostgreSQL",
       ],
       image: "/midnight.png",
+      video: "",
     },
   ],
   testimonials: [
