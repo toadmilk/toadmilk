@@ -171,6 +171,7 @@ export const DATA = {
       ],
       image: "/midnight.png",
       video: "",
+      links: [],
     },
   ],
   testimonials: [
