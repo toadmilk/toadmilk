@@ -91,6 +91,26 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Midnight (WIP)",
+      href: "https://midnightai.vercel.app",
+      dates: "Aug 2024 - Current",
+      active: true,
+      description: "Midnight is a ChatGPT wrapper that lets you chat with your documents, fine-tune the final script and effortlessly create short-form content.",
+      technologies: [
+        "React",
+        "Typescript",
+        "Next.js",
+        "TailwindCSS",
+        "Prisma",
+        "tRPC",
+        "zod",
+        "Kinde Auth",
+        "UploadThing",
+        "PostgreSQL",
+      ],
+      image: "/midnight.png",
+    },
+    {
       title: "Breaksphere",
       href: "https://breaksphere.vercel.app",
       dates: "Jul 2023 - Jul 2024",
