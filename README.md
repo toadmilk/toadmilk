@@ -43,9 +43,6 @@
     <a href="https://uploadthing.com" target="_blank" rel="noreferrer">
         <img src="https://uploadthing.com/favicon.ico" alt="uploadthing" width="40" height="40"/>
     </a>
-    <a href="https://kinde.com/" target="_blank" rel="noreferrer">
-        <img src="https://pbs.twimg.com/profile_images/1577508370189520896/zAvyayM9_400x400.jpg" alt="kinde" width="40" height="40"/> 
-    </a>
     <a href="https://vercel.com" target="_blank" rel="noreferrer">
         <img src="https://assets.vercel.com/image/upload/v1588805858/repositories/vercel/logo.png" alt="vercel" width="40" height="40"/>
     </a>
