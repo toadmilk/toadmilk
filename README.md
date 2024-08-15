@@ -8,8 +8,6 @@
 
 - 👨‍💻 All of my projects are available at [benjaminwilliams.xyz](https://benjaminwilliams.xyz)
 
-- 💬 Ask me about **React**
-
 - 📫 How to reach me **benjaminwilliamswork6@gmail.com**
 
 - ⚡ Fun fact **I got a Senior Engineer to say "Skibidi Toliet" one time 💀**
