@@ -101,6 +101,7 @@ export const DATA = {
         "Next.js",
         "Prisma",
         "tRPC",
+        "Stripe",
         "UploadThing",
         "OpenAI",
         "PostgreSQL",
