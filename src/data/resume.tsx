@@ -161,9 +161,9 @@ export const DATA = {
       href: "https://mod.io/g/melvoridle/m/semi-auto-township",
       dates: "Sep 2024 - Current",
       active: true,
-      description: "Contributed to Semi Auto Township, a Quality of Life mod for Melvor Idle with nearly 80,000 downloads. The mod streamlines the township management process, automating tasks that many players find tedious.",
+      description: "Contributor for Semi Auto Township, a Quality of Life mod for Melvor Idle with nearly 80,000 downloads. The mod streamlines the township management process, automating tasks that many players find tedious.",
       technologies: [
-        "JavaScript",
+        "Javascript",
         "Mod.io",
         "Melvor Idle",
       ],
