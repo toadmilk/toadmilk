@@ -180,6 +180,7 @@ export const DATA = {
         }
       ],
       image: "/semi-auto-township.png",
+      video: "",
     },
     {
       title: "Pondering Reality",
