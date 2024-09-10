@@ -69,11 +69,11 @@ export const DATA = {
       href: "https://fleetpin.co.nz",
       badges: [],
       location: "Christchurch, New Zealand",
-      title: "Software Engineer Intern",
+      title: "Software Engineer",
       logoUrl: "/fleetpin.png",
       start: "Nov 2023",
       end: "Feb 2024",
-      description: "Lead development on an internal stock management tool; reducing data entry time by over 93%, human input errors by 97%, and improving device \n" +
+      description: "Lead development on an business critical internal stock management tool; reducing data entry time by over 93%, human input errors by 97%, and improving device \n" +
           "registration speed by 82%. Took significant ownership in frontend, navigating through vague user requirements and Figma designs with autonomy and initiative. Developed a CSV importer and a \"Pick and Provision\" interface, streamlining device management and data handling. Spearheaded API development, conducted automated integration tests and actively lead database schema refinement.",
       technologies: ["Vue3", "JavaScript", "Scala", "GraphQL", "PrimeVue", "MySQL"],
     },
