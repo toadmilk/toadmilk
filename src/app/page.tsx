@@ -1,3 +1,5 @@
+"use client";
+
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
@@ -9,13 +11,34 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 import { OrbitingCirclesTech } from "@/components/orbital-circles";
 import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";
-import {cn} from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import {buttonVariants} from "@/components/ui/button";
 import TestimonialCard from "@/components/testimonial-card";
+import { useEffect, useState } from 'react';
 
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
+  const [downloads, setDownloads] = useState<number | null>(null);
+
+  useEffect(() => {
+    async function fetchDownloads() {
+      try {
+        const response = await fetch('/api/modio');
+        if (!response.ok) {
+          new Error('Failed to fetch data');
+        }
+        const data = await response.json();
+        const totalDownloads = data.stats.downloads_total!;
+        setDownloads(totalDownloads);
+      } catch (error) {
+        console.error("Error fetching downloads:", error);
+      }
+    }
+
+    fetchDownloads();
+  }, []);
+
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
@@ -166,7 +189,14 @@ export default function Page() {
                   href={project.href}
                   key={project.title}
                   title={project.title}
-                  description={project.description}
+                  description={
+                    project.title === "Semi Auto Township"
+                      ? project.description.replace(
+                        "NUMBER",
+                        downloads ? downloads.toLocaleString() : "80,000"
+                      )
+                      : project.description
+                  }
                   dates={project.dates}
                   tags={project.technologies}
                   image={project.image}
