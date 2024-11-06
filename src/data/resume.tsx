@@ -86,6 +86,7 @@ export const DATA = {
       logoUrl: "/canterbury.png",
       start: "2021",
       end: "2023",
+      description: "Notable classes are SENG302, SENG365, COSC367"
     },
   ],
   projects: [
@@ -157,11 +158,37 @@ export const DATA = {
         "",
     },
     {
+      title: "Semi Auto Farming",
+      href: "https://mod.io/g/melvoridle/m/semi-auto-farming",
+      dates: "Nov 2024 - Current",
+      active: true,
+      description: "Contributor to Semi Auto Farm, a QoL mod for the game Melvor Idle, which has been downloaded NUMBER times. The mod automates farming tasks to ensure maximum efficiency.",
+      technologies: [
+        "Javascript",
+        "Mod.io",
+        "Melvor Idle",
+      ],
+      links: [
+        {
+          type: "Mod.io",
+          href: "https://mod.io/g/melvoridle/m/semi-auto-farming",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://gitlab.com/semi5/semi-auto-farm",
+          icon: <Icons.github className="size-3"/>,
+        }
+      ],
+      image: "/semi-auto-farming.png",
+      video: "",
+    },
+    {
       title: "Semi Auto Township",
       href: "https://mod.io/g/melvoridle/m/semi-auto-township",
       dates: "Sep 2024 - Current",
       active: true,
-      description: "Contributor to Semi Auto Township, a Quality of Life mod for the game Melvor Idle, which has been downloaded NUMBER times. The mod enhances township management by automating tasks that many players find tedious.",
+      description: "Contributor to Semi Auto Township, a QoL mod for the game Melvor Idle, which has been downloaded NUMBER times. The mod enhances township management by automating tasks that many players find tedious.",
       technologies: [
         "Javascript",
         "Mod.io",

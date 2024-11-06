@@ -18,19 +18,27 @@ import { useEffect, useState } from 'react';
 
 const BLUR_FADE_DELAY = 0.04;
 
+type DownloadData = {
+  id: number;
+  downloads: number;
+};
+
 export default function Page() {
-  const [downloads, setDownloads] = useState<number | null>(null);
+  const [downloadData, setDownloadData] = useState<DownloadData[]>([]);
 
   useEffect(() => {
     async function fetchDownloads() {
       try {
         const response = await fetch('/api/modio');
         if (!response.ok) {
-          new Error('Failed to fetch data');
+          throw new Error('Failed to fetch data');
         }
         const data = await response.json();
-        const totalDownloads = data.stats.downloads_total!;
-        setDownloads(totalDownloads);
+        const downloadData = data.map(mod => ({
+          id: mod.id,
+          downloads: mod.stats.downloads_total,
+        }));
+        setDownloadData(downloadData);
       } catch (error) {
         console.error("Error fetching downloads:", error);
       }
@@ -38,6 +46,14 @@ export default function Page() {
 
     fetchDownloads();
   }, []);
+
+  const townshipMod = downloadData.find(mod => mod.id === 2953729);
+  const farmingMod = downloadData.find(mod => mod.id === 2362049);
+
+  const downloadDefaults = {
+    "Semi Auto Township": townshipMod ? townshipMod.downloads.toLocaleString() : "114,000",
+    "Semi Auto Farming": farmingMod ? farmingMod.downloads.toLocaleString() : "80,000",
+  };
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
@@ -190,11 +206,8 @@ export default function Page() {
                   key={project.title}
                   title={project.title}
                   description={
-                    project.title === "Semi Auto Township"
-                      ? project.description.replace(
-                        "NUMBER",
-                        downloads ? downloads.toLocaleString() : "80,000"
-                      )
+                    downloadDefaults[project.title]
+                      ? project.description.replace("NUMBER", downloadDefaults[project.title])
                       : project.description
                   }
                   dates={project.dates}
