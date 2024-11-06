@@ -207,7 +207,7 @@ export default function Page() {
                   title={project.title}
                   description={
                     downloadDefaults[project.title]
-                      ? project.description.replace("NUMBER", downloadDefaults[project.title])
+                      ? project.description.replace("NUMBER", downloadDefaults[project.title]!)
                       : project.description
                   }
                   dates={project.dates}
