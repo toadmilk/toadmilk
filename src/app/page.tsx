@@ -206,8 +206,8 @@ export default function Page() {
                   key={project.title}
                   title={project.title}
                   description={
-                    downloadDefaults[project.title]
-                      ? project.description.replace("NUMBER", downloadDefaults[project.title]!)
+                    downloadDefaults[project.title as keyof typeof downloadDefaults]
+                      ? project.description.replace("NUMBER", downloadDefaults[project.title as keyof typeof downloadDefaults])
                       : project.description
                   }
                   dates={project.dates}
