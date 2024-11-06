@@ -34,7 +34,7 @@ export default function Page() {
           throw new Error('Failed to fetch data');
         }
         const data = await response.json();
-        const downloadData = data.map(mod => ({
+        const downloadData: DownloadData[] = data.map((mod: { id: number; stats: { downloads_total: number } }) => ({
           id: mod.id,
           downloads: mod.stats.downloads_total,
         }));
