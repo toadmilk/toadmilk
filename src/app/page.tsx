@@ -47,8 +47,8 @@ export default function Page() {
     fetchDownloads();
   }, []);
 
-  const townshipMod = downloadData.find(mod => mod.id === 2953729);
-  const farmingMod = downloadData.find(mod => mod.id === 2362049);
+  const townshipMod: DownloadData = downloadData.find(mod => mod.id === 2953729) || { id: 2953729, downloads: 114000 };
+  const farmingMod: DownloadData = downloadData.find(mod => mod.id === 2362049) || { id: 2362049, downloads: 432000 };
 
   const downloadDefaults = {
     "Semi Auto Township": townshipMod ? townshipMod.downloads.toLocaleString() : "114,000",
