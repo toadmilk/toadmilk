@@ -9,7 +9,7 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/Christchurch",
   description:
     "Full-stack Software Engineer with a focus on frontend.",
-  summary: "I’m a Christchurch-based developer with 8 years of experience in creating complex web apps and digital experiences. I’m passionate about innovation and aim to be part of a fun, forward-thinking team in the next 5 years.",
+  summary: "I’m a Christchurch-based engineer with 8 years of experience in creating complex web apps and digital experiences. I’m passionate about innovation and aim to be part of a fun, forward-thinking team in the next 5 years.",
   avatarUrl: "/me.png",
   skills: [
     "React",
@@ -82,11 +82,11 @@ export const DATA = {
     {
       school: "University of Canterbury",
       href: "https://www.canterbury.ac.nz",
-      degree: "Bachelor's Degree of Computer Science (BSC)",
+      degree: "Bachelor's Degree of Computer Science (BSC), Minor in Game Design",
       logoUrl: "/canterbury.png",
       start: "2021",
       end: "2023",
-      description: "Notable classes are SENG302, SENG365, COSC367"
+      description: "Notable classes are SENG302, SENG365 and COSC367."
     },
   ],
   projects: [
